@@ -3,3 +3,90 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+nav{
+    background-color:rgb(0, 132, 253);
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.nav-container{
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.nav-hamburger{
+    display: none;
+}
+
+.demo{
+    padding-top: 3em;
+}
+
+.demo-container{
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.demo-card{
+    background-color: rgb(181, 221, 255);
+    border-radius: 1em;
+}
+
+.card-big{
+    width: calc((100% - 1em) * 2 / 3);
+    display: flex;
+}
+
+.card-small{
+    width: calc((100% - 2em) / 3);
+}
+
+.demo-application{
+    width: 50%;
+}
+
+.application-img{
+    width: 50%;
+}
+
+.application-img img{
+    width: 80%;
+    vertical-align: bottom;
+    text-align: center;
+}
+
+.planning{
+    background-color: rgb(151, 146, 228);
+}
+
+.planning-container{
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    gap: 1em;
+}
+
+.planning-left{
+    width: calc((100% - 1em) / 2);
+}
+.planning-left img{
+    width: 100%;
+}
+
+.planning-right{
+    width: calc((100% - 1em) / 2);
+}
+
+.planning-right img{
+    width: 100%;
+}
