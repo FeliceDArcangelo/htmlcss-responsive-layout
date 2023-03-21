@@ -37,6 +37,12 @@ nav{
     padding-inline: 1em;
 }
 
+@media (max-width: 810px){
+    .nav-menu{
+        display: none;
+    }
+}
+
 .nav-menu a:link, .nav-menu a:visited{
     color: white;
     text-decoration: none;
@@ -67,6 +73,13 @@ nav{
 .nav-hamburger{
     display: none;
     color: white;
+    font-size: x-large;
+}
+
+@media (max-width: 810px){
+    .nav-hamburger{
+        display: inline-block;
+    }
 }
 /* finish header */
 
@@ -99,12 +112,29 @@ nav{
 }
 
 .card-big{
-    width: calc(((100% - 2em) * 2 / 3) + 1em);
+    flex: 1 1 calc(((100% - 2em) * 2 / 3) + 1em);
     display: flex;
 }
 
+@media (max-width:810px){
+    .card-big{
+        flex-direction: column;
+    }
+    .application-img{
+        text-align: left;
+        align-self: flex-start;
+    }
+}
+
+@media (max-width:375px){
+    .demo-container{
+        flex-direction: column;
+    }
+}
+
 .card-small{
-    width: calc((100% - 2em) / 3);
+    flex: 1 1 calc((100% - 2em) / 3);
+    min-width: 200px;
     text-align: center;
     padding-inline: 1em;
     padding-top: 1.5em;
@@ -118,7 +148,7 @@ nav{
 }
 
 .demo-application{
-    width: 50%;
+    flex: 1 1 50%;
     padding-inline: 1em;
     padding-top: 1.5em;
     padding-bottom: 1.5em;
@@ -146,7 +176,7 @@ nav{
 }
 
 .application-img{
-    width: 50%;
+    flex: 1 1 50%;
     align-self: flex-end;
     text-align: center;
 }
@@ -164,7 +194,7 @@ nav{
 }
 
 .planning-container{
-    max-width: 800px;
+    max-width: 810px;
     margin: auto;
     display: flex;
     gap: 3em;
@@ -173,8 +203,14 @@ nav{
     padding-inline: 1em;
 }
 
+@media (max-width: 810px){
+    .planning-container{
+        flex-direction: column;
+    } 
+}
+
 .planning-left{
-    width: calc((100% - 3em) / 2);
+    flex: 1 1 calc((100% - 3em) / 2);
     color: white;
 }
 
@@ -189,7 +225,7 @@ nav{
 }
 
 .planning-right{
-    width: calc((100% - 3em) / 2);
+    flex: 1 1 calc((100% - 3em) / 2);
     text-align: center;
     align-self: flex-end;
     background-color: white;
@@ -236,8 +272,6 @@ nav{
     font-size: large;
     vertical-align: -10px;
 }
-
-
 /* finish planning */
 
 /* testimonials */
@@ -274,6 +308,13 @@ nav{
     margin-top: 2em;
 }
 
+@media (max-width: 520px){
+    .testimonial-card{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 .testimonial-card img{
     width: 150px;
     height: 150px;
@@ -307,6 +348,12 @@ nav{
     padding-inline: 1em;
 }
 
+@media (max-width: 360px){
+    .benefits h2{
+        font-size: 2.5rem;
+    }
+}
+
 .benefits-container{
     max-width: 900px;
     margin: auto;
@@ -317,7 +364,8 @@ nav{
 }
 
 .benefits-box{
-    width: calc((100% - 3em) / 3);
+    min-width: 248px;
+    flex: 1 1 calc((100% - 3em) / 3);
     padding: 1.5em;
     padding-bottom: 2em;
     background-color: white;
@@ -370,14 +418,22 @@ nav{
     max-width: 850px;
     margin: auto;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     gap: 3em;
     padding-top: 3em;
     padding-bottom: 4em;
     padding-inline: 1em;
 }
 
+@media (max-width: 520px){
+    .about-us{
+        flex-direction: column;
+    }
+}
+
 .about-us-text{
-    width: calc((100% - 1em) * 2 / 3);
+    flex: 1 1 calc(100% * 2 / 3);
     line-height: 2.2;
 }
 
@@ -391,22 +447,36 @@ nav{
 }
 
 .about-us-img{
-    width: 30%;
-    position: relative;
-    padding-inline: 4em;
+    width: 150px;
+    padding-inline: 1em;
     padding-top: 2em;
     z-index: -1;
+    min-width: 230px;
 }
 
 .about-us-img img{
-    width: 100%;
+    width: 150px;
     aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: 50%;
     text-align: center;
 }
 
+.about-us-img-container{
+    position: relative;
+    display: inline-block;
+}
+
+.quote-left-img{
+    color: rgb(151, 146, 228);
+    font-size: 50px;
+    position: absolute;
+    top: -2rem;
+    right: 0;
+}
+
 .about-us-img h3{
+    display: inline-block;
     font-size: 1.3rem;
     color: rgb(151, 146, 228);
     line-height: 1.4;
@@ -435,14 +505,6 @@ nav{
     padding-inline: calc(1em - .2em);
     padding-top: calc(.2em - .2em);
     padding-bottom: calc(.2em - .2em);
-}
-
-.about-us-img div:last-child{
-    color: rgb(151, 146, 228);
-    font-size: 50px;
-    position: absolute;
-    top: 0;
-    right: 3.5rem;
 }
 /* finish about us */
 
